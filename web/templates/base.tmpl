@@ -79,7 +79,6 @@
     {{end}}
 
     {{block "footer" .}}
-    {{$cocUrl := urlToNotice "NoticeCodeOfConduct"}}
     {{$ppUrl := urlToNotice "NoticePrivacyPolicy"}}
     {{$setLanguageUrl := urlTo "complete:set-language"}}
     <footer class="grid auto-rows-min mb-12">
@@ -88,12 +87,6 @@
           href="{{urlTo "complete:index"}}"
           class="px-4 text-gray-500 hover:underline"
           >{{i18n "NavAdminLanding"}}</a>
-        {{if $cocUrl}}
-        <a
-          href="{{$cocUrl}}"
-          class="px-4 text-gray-500 hover:underline"
-          >{{i18n "NoticeCodeOfConduct"}}</a>
-        {{end}}
         {{if $ppUrl}}
         <a
           href="{{$ppUrl}}"
